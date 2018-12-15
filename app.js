@@ -156,3 +156,60 @@ let Val;
             console.log(val);
             console.log(typeof val);
             console.log(val.toFixed());
+
+//boolean to number
+
+            val = Number(true); // 1 for true
+            console.log(val);
+            console.log(typeof val);
+            console.log(val.toFixed());
+
+            val = Number(false); // 0 for false
+            console.log(val);
+            console.log(typeof val);
+            console.log(val.toFixed());
+
+// null to number
+
+            val = Number(null); // 0 for null
+            console.log(val);
+            console.log(typeof val);
+            console.log(val.toFixed());
+
+// string to number
+
+            val = Number('hello') //NaN => Not a Number
+            console.log(val);
+            console.log(typeof val);
+            console.log(val.toFixed());
+
+// array to number
+
+            val = Number([1,2,3])
+            console.log(val);
+            console.log(typeof val);
+            console.log(val.toFixed());
+
+//another method parsInt and parsFloat
+
+            val = parseInt(1000.90);
+            val = parseFloat(100.87)
+            console.log(val);
+            console.log(typeof val);
+            console.log(val.toFixed(2));
+
+// type conversion
+            const val1 = 5;
+            const val2 = 6;
+            const sum = val1 + val2;
+
+            console.log(sum);
+            console.log(typeof sum);
+
+const val11 = String(5);
+const val22 = 6;
+const sum1 = val11 + val22;
+
+console.log(sum1);
+console.log(typeof sum1);
+
