@@ -48,37 +48,111 @@ console.log(person);
 //---------------------------------------------//
 //   Data Types
 
-// Primitive  Types
+            // Primitive  Types
 
-//string
-const namme = 'john Doe';
-console.log(typeof namme);
+            //string
+            const namme = 'john Doe';
+            console.log(typeof namme);
 
-// Null
-const car = null;
-console.log(typeof car);
+            // Null
+            const car = null;
+            console.log(typeof car);
 
-// undefined
-let test;
-console.log(typeof test);;
+            // undefined
+            let test;
+            console.log(typeof test);;
 
-//Symbol
-const sym = Symbol('aa');
-console.log(typeof sym);
+            //Symbol
+            const sym = Symbol('aa');
+            console.log(typeof sym);
 
 // Refrence Types 
 
-//Array
-const hobbies = ['movies','music'];
-console.log(typeof hobbies);
+            //Array
+            const hobbies = ['movies','music'];
+            console.log(typeof hobbies);
 
-//object literal
-const address = {
-    city: 'Boston',
-    states: 'MA'
-}
-console.log(typeof address);
+            //object literal
+            const address = {
+                city: 'Boston',
+                states: 'MA'
+            }
+            console.log(typeof address);
+              
+            // Date
+            const today = new Date();
+            console.log(today);
+            console.log(typeof today);
 
-const today = new Date();
-console.log(today);
-console.log(typeof today);
+//-------------------------------------------//
+
+// Type Conversion
+
+let Val;
+
+//Number to string
+
+        val = 5;
+        //output
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length);
+
+        // To convert use String() function
+        val = String(55);
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length);
+
+        // Expression in string()
+        val = String(5+5);
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length);
+
+// bool to String
+
+        val = true
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length);
+
+         // To convert use String() function
+        val = true
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length);
+
+// Date to String
+        val = String( new Date());
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length);
+
+// Array to string
+        val = String([1,2,3,4,5]);
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length);
+
+//We can also use tostring() function
+
+            val = [1,2,3,4,5].toString();
+            val = new Date().toString();
+            val = true.toString(); 
+            console.log(val);
+            console.log(typeof val);
+            console.log(val.length);
+
+//string to number
+
+            val = '5';
+            console.log(val);
+            console.log(typeof val);
+           // console.log(val.toFixed());
+
+            // Use Number Function
+            val = Number('5');
+            console.log(val);
+            console.log(typeof val);
+            console.log(val.toFixed());
