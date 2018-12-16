@@ -54,12 +54,32 @@ val = numbers.indexOf(21);
     console.log(val);
 
 // Concatenate array
-
 val = numbers.concat(numbers2);
 console.log(numbers);
 console.log(val);
 
 // Sorting array
+    val = fruit.sort();
+    val = numbers.sort();
 
-val = fruit.sort();
+    // use compare function
+    val = numbers.sort(function(a,b){
+        return a - b;
+    });
+
+    // reverse sort
+    val = numbers.sort(function(a,b){
+        return b-a;
+    });
+
+    console.log(numbers);
+    console.log(val);
+
+//Find 
+
+function under50(num){
+    return num < 50;
+}
+val = numbers.find(under50);
+console.log(numbers);
 console.log(val);
