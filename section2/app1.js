@@ -29,7 +29,8 @@
 
         val = document.scripts;
         val = document.scripts[2].getAttribute('src')
-
+        
+        // nodelist to array convert
         let scripts = document.scripts;
         let scriptArray = Array.from(scripts);
 
@@ -73,3 +74,62 @@
         document.querySelector('li:nth-child(4)').style.color ='yellow';
         document.querySelector('li:nth-child(3)').innerText ='Hello world';
         document.querySelector('li:nth-child(odd)').style.background ='#ccc';
+
+//Dom Selector For Multiple elements
+//19-12-2018
+
+        //document.getElementsByClassName
+
+            const items = document.getElementsByClassName('collection-item');
+            console.log(items);
+            console.log(items[0]);
+            items[0].style.color = 'red';
+            items[3].textContent = 'Hell0';
+
+            const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+
+            console.log(listItems);
+
+        //document.getElementByTagName
+
+            const lis = document.getElementsByTagName('li');
+            console.log(lis);
+            console.log(lis[0]);
+            lis[0].style.color = 'pink';
+            lis[3].textContent = 'lis helloo';
+
+            //Convert Html collection into Array
+            let arrayy = Array.from(lis);
+            //console.log(arrayy);
+        // arrayy.reverse();
+            console.log(arrayy);
+            arrayy.forEach(function(li,index){
+                console.log(li.className);
+                li.textContent = `${index}: Hello`;
+            });
+
+        //document.querySelectorAll
+
+            const items1 = document.querySelectorAll('ul.collection li.collection-item');
+            console.log(items1);
+
+            items1.forEach(function(item,index){
+                item.textContent = `${index}: Hello0`;
+            });
+
+            const liOdd = document.querySelectorAll('li:nth-child(odd)');
+            const liEven = document.querySelectorAll('li:nth-child(even)');
+
+            liOdd.forEach(function(item){
+                item.style.background="Grey";
+            });
+
+            liEven.forEach(function(item){
+                item.style.background="pink";
+            });
+
+            for(let i = 0; i < liEven.length; i++){
+                console.log(i);
+                console.log(liEven.length);
+                liEven[i].style.background="violet";
+            }
