@@ -127,7 +127,7 @@
             liEven.forEach(function(item){
                 item.style.background="pink";
             });
-
+             // or 
             for(let i = 0; i < liEven.length; i++){
                 console.log(i);
                 console.log(liEven.length);
