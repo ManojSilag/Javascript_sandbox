@@ -38,7 +38,8 @@
         const newStr = str2.replace(re, 'Hi');
         console.log(newStr);
 
-//Regular expression- Metacharacter symbols
+/Regular expression- Metacharacter symbols
+//                  - character Sets and Quantifiers
 //13-1-2019
 
     let re;
@@ -55,10 +56,25 @@
     re=/gre?a?y/i;  //Optional charater here if e or a
     re=/gre?a?y\?/i;  //Escape charater 
 
+    //Brackets [] - character Sets
+    re =/gr[ae]y/i; //Must be an a or e
+    re =/[GF]ray/i; //Must be an G or F
+    re =/[^GF]ray/i; //Match anything except a G or F
+    re =/[A-Z]ray/; //Match any UpperCase letter
+    re =/[a-z]ray/; //Match any lowerCase letter
+    re =/[A-Za-z]ray/; //Match any  letter
+    re = /[0-9][0-9]ray/; //Match any digit
 
+    //Braces {} - Quantifiers
+    re = /Hel{2}o/i;  //ust occur exactly {m} amount times
+    re = /Hel{2,4}o/i;  //ust occur exactly {m} amount times
+    re = /Hel{2,}o/i;  //ust occur at least {m} times
+
+    //Parenthesis () - grouping
+    re = /^([0-9]x){3}$/
 
     //String to match
-    const str = 'grer?';
+    const str = '0x1x3x';
 
     //exec() result
     const result = re.exec(str);
