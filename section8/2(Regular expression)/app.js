@@ -38,8 +38,10 @@
         const newStr = str2.replace(re, 'Hi');
         console.log(newStr);
 
-/Regular expression- Metacharacter symbols
+//Regular expression- Metacharacter symbols
 //                  - character Sets and Quantifiers
+//                  - Shorthand charcter classes
+
 //13-1-2019
 
     let re;
@@ -73,8 +75,23 @@
     //Parenthesis () - grouping
     re = /^([0-9]x){3}$/
 
+    //Shorthand character classes
+    re = /\w/; //Word character - alpanumeric character or _
+    re = /\w+/; // + eqaul one or more
+    re = /\W/; // Non Word character - alpanumeric character or _
+    re = /\d/; // Match any digit
+    re = /\d+/; // Match any digit 0 or more times
+    re = /\D/; // Match any  Non-digit
+    re = /\s/; // Match whitspace char
+    re = /\S+/; // Match non whitspace char
+    re = /Hell\b/i; // word boundry
+
+    // Assertions
+    re = /x(?=y)/; //Match x only if followed by y
+    re = /x(?!y)/; //Match x only if NOT followed by y
+
     //String to match
-    const str = '0x1x3x';
+    const str = 'yx';
 
     //exec() result
     const result = re.exec(str);
