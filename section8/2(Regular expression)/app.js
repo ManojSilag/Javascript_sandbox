@@ -38,3 +38,38 @@
         const newStr = str2.replace(re, 'Hi');
         console.log(newStr);
 
+//Regular expression- Metacharacter symbols
+//13-1-2019
+
+    let re;
+    //Literal characters
+    re = /hello/;
+    re = /hello/i;
+
+    //Metacharacter symbols
+    re=/^h/i;  //Must start with
+    re=/world$/i;  //Must end with
+    re=/^hello$/i;  //Must begin and end with
+    re=/h.llo/i;  //Matches any ONe character
+    re=/h*llo/i;  //Matches any character 0 or more times
+    re=/gre?a?y/i;  //Optional charater here if e or a
+    re=/gre?a?y\?/i;  //Escape charater 
+
+
+
+    //String to match
+    const str = 'grer?';
+
+    //exec() result
+    const result = re.exec(str);
+    console.log(result);
+
+
+    function reTest(re,str){
+        if(re.test(str)){
+            console.log(`${str} matched ${re.source}`);
+        } else{
+            console.log(`${str} does not match ${re.source}`);
+        }
+    }
+    reTest(re, str);
