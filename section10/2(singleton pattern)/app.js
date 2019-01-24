@@ -21,4 +21,4 @@ const instanceA = singleton.getInstance();
 const instanceB = singleton.getInstance();
 
 console.log(instanceA === instanceB);
-//console.log(instanceA);
+console.log(instanceA);
