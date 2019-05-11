@@ -1,5 +1,3 @@
-// Storage Controller
-
 
 // Item Controller
 const ItemCtrl = (function(){
